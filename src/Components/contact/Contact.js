@@ -49,7 +49,6 @@ class Contact extends Component {
       <div className="Contact">
         <form action="" onSubmit={this.handleSubmit}>
           <div>
-            <label htmlFor="firstName">First Name</label>
             <input
               type="text"
               name="firstName"
@@ -59,7 +58,6 @@ class Contact extends Component {
             />
           </div>
           <div>
-            <label htmlFor="lastName">Last Name</label>
             <input
               type="text"
               name="lastName"

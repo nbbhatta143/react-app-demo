@@ -14,8 +14,8 @@ function App() {
       <Navigation />
       <Switch>
         <Route exact path="/" render={(props) => <Welcome {...props} name="Narayan" />} />
-        <Route path="/clock" component={Clock} />
-        <Route path="/contact" component={Contact} />
+        <Route exact path="/clock" component={Clock} />
+        <Route exact path="/contact" component={Contact} />
         <Route path="/Welcome/:name" component={Welcome} />
         <Route path="*" component={ReportNoLoad} />
       </Switch>
