@@ -60,6 +60,7 @@ class Jeopardy extends Component {
     if (!this.state.data.id) {
       return <div>Please Wait!</div>;
     }
+
     return (
       <div className="Jeopardy">
         <JeopardyDisplay
@@ -69,7 +70,6 @@ class Jeopardy extends Component {
         />
       </div>
     );
-    //<div>{JSON.stringify(this.state.data)}</div>;
   }
 }
 export default Jeopardy;
