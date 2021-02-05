@@ -7,15 +7,15 @@ class Contact extends Component {
     this.state = {
       submitted: false,
       formData: {
-        firstName: "",
-        lastName: "",
+        answer: "",
+        correctAnswer: this.props.answer,
       },
     };
   }
 
   handleChange = (event) => {
     const formData = { ...this.state.formData };
-    formData[event.target.name] = event.target.value;
+    formData.answer = event.target.value;
 
     this.setState({ formData });
   };
@@ -23,8 +23,7 @@ class Contact extends Component {
     this.setState({
       submitted: false,
       formData: {
-        firstName: "",
-        lastName: "",
+        answer: "",
       },
     });
   };
@@ -40,33 +39,24 @@ class Contact extends Component {
     if (this.state.submitted) {
       return (
         <div className="Contact">
-          <p>Thank you {this.state.formData.firstName} for submitting the form </p>
+          <p>Thank you! The Correct answer is {this.props.answer} </p>
           <button onClick={this.resetForm}>Reset</button>
         </div>
       );
     }
+
     return (
       <div className="Contact">
         <form action="" onSubmit={this.handleSubmit}>
           <div>
             <input
               type="text"
-              name="firstName"
-              value={this.state.formData.firstName}
-              onChange={this.handleChange}
-              placeholder="First Name"
-            />
-          </div>
-          <div>
-            <input
-              type="text"
-              name="lastName"
-              value={this.state.formData.lastName}
-              placeholder="Last Name"
+              name="answer"
+              value={this.state.formData.answer}
+              placeholder="Your Answer"
               onChange={this.handleChange}
             />
           </div>
-
           <button>Submit Form</button>
         </form>
       </div>

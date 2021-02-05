@@ -7,6 +7,7 @@ import Clock from "./Components/clock/Clock";
 import Contact from "./Components/contact/Contact";
 import Navigation from "./Components/navigation/Navigation";
 import ReportNoLoad from "./Components/reportNoLoad/ReportNoLoad";
+import Jeopardy from "./Components/jeopardy/Jeopardy";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/clock" component={Clock} />
         <Route exact path="/contact" component={Contact} />
         <Route path="/Welcome/:name" component={Welcome} />
+        <Route exact path="/jeopardy" component={Jeopardy} />
         <Route path="*" component={ReportNoLoad} />
       </Switch>
     </div>
